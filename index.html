@@ -1,0 +1,1003 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <title>Creative Portfolio</title>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Boxicons -->
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+  <!-- FontAwesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+
+  <!-- AOS Animation -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+  <!-- Typed JS -->
+  <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#0f172a;
+    color:white;
+    overflow-x:hidden;
+}
+
+/* NAVBAR */
+
+/* ===========================
+        CREATIVE NAVBAR
+=========================== */
+
+.navbar{
+    padding:18px 8%;
+    background:rgba(15,23,42,.55);
+    backdrop-filter:blur(18px);
+    -webkit-backdrop-filter:blur(18px);
+    border-bottom:1px solid rgba(0,255,255,.15);
+    transition:.4s ease;
+    z-index:999;
+}
+
+/* Navbar when scrolling */
+
+.navbar.scrolled{
+    background:#08111f;
+    box-shadow:0 10px 30px rgba(0,255,255,.12);
+}
+
+/* Logo */
+
+.navbar-brand{
+    font-size:30px;
+    font-weight:700;
+    color:#fff !important;
+    letter-spacing:1px;
+    transition:.4s;
+}
+
+.navbar-brand span{
+    color:#00ffff;
+}
+
+.navbar-brand:hover{
+    color:#00ffff !important;
+    text-shadow:0 0 15px cyan;
+}
+
+/* Navigation */
+
+.navbar-nav{
+    gap:10px;
+}
+
+.nav-link{
+    position:relative;
+    color:#fff !important;
+    font-weight:500;
+    padding:10px 18px !important;
+    border-radius:30px;
+    transition:.35s;
+}
+
+/* Hover */
+
+.nav-link:hover{
+    color:#00ffff !important;
+    background:rgba(0,255,255,.08);
+}
+
+/* Animated underline */
+
+.nav-link::after{
+    content:'';
+    position:absolute;
+    left:50%;
+    bottom:6px;
+    width:0%;
+    height:2px;
+    background:cyan;
+    transition:.4s;
+    transform:translateX(-50%);
+}
+
+.nav-link:hover::after,
+.nav-link.active::after{
+    width:60%;
+}
+
+/* Active */
+
+.nav-link.active{
+    color:#00ffff !important;
+    background:rgba(0,255,255,.1);
+    box-shadow:0 0 20px rgba(0,255,255,.25);
+}
+
+/* Contact Button */
+
+.nav-btn{
+    margin-left:20px;
+    padding:10px 25px;
+    border-radius:30px;
+    background:linear-gradient(45deg,#00ffff,#007cf0);
+    color:white;
+    text-decoration:none;
+    font-weight:600;
+    transition:.4s;
+}
+
+.nav-btn:hover{
+    transform:translateY(-3px);
+    box-shadow:0 0 25px cyan;
+    color:white;
+}
+
+/* Mobile */
+
+.navbar-toggler{
+    border:none;
+    box-shadow:none !important;
+}
+
+.navbar-toggler-icon{
+    filter:invert(1);
+}
+
+@media(max-width:991px){
+
+    .navbar-collapse{
+        margin-top:15px;
+        padding:20px;
+        border-radius:15px;
+        background:#111827;
+    }
+
+    .nav-btn{
+        margin-top:15px;
+        margin-left:0;
+        display:inline-block;
+    }
+
+}
+
+/* SECTION */
+
+section{
+    min-height:100vh;
+    padding:120px 10%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+/* HOME */
+
+.home{
+    gap:50px;
+    background:
+    linear-gradient(rgba(15,23,42,0.8),rgba(15,23,42,0.9));
+
+    background-size:cover;
+    background-position:center;
+}
+
+.home img{
+    width:350px;
+    border-radius:20px;
+    animation:floatImage 4s ease-in-out infinite;
+    box-shadow:0 0 40px rgba(0,255,255,0.5);
+}
+
+@keyframes floatImage{
+
+    0%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-20px);
+    }
+
+    100%{
+        transform:translateY(0);
+    }
+}
+
+.home-content h1{
+    font-size:60px;
+    font-weight:bold;
+}
+
+.home-content h3{
+    font-size:30px;
+}
+
+.home-content p{
+    margin-top:20px;
+    line-height:1.8;
+}
+
+/* SOCIAL */
+
+.home-sci{
+    display:flex;
+    gap:20px;
+    margin-top:20px;
+}
+
+.home-sci a{
+    width:50px;
+    height:50px;
+    border:2px solid cyan;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:white;
+    transition:0.4s;
+    text-decoration:none;
+}
+
+.home-sci a:hover{
+    background:cyan;
+    color:#0f172a;
+    transform:translateY(-10px);
+    box-shadow:0 0 20px cyan;
+}
+
+/* BUTTON */
+
+.glow-btn{
+    margin-top:25px;
+    padding:14px 35px;
+    border:none;
+    border-radius:40px;
+    background:linear-gradient(45deg,#00ffff,#007cf0);
+    color:white;
+    font-weight:600;
+    transition:0.4s;
+}
+
+.glow-btn:hover{
+    transform:scale(1.1);
+    box-shadow:0 0 30px cyan;
+}
+
+/* ABOUT */
+
+.about{
+    margin-top:-100px;
+    gap:50px;
+}
+
+.about img{
+    width:350px;
+    border-radius:20px;
+}
+
+.about-content h2{
+    font-size:45px;
+}
+
+.about-content span{
+    color:cyan;
+}
+
+/* PROJECTS */
+
+.projects-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:30px;
+    width:100%;
+}
+
+.project-box{
+    padding:30px;
+    background:rgba(255,255,255,0.05);
+    border-radius:20px;
+    transition:0.5s;
+    backdrop-filter:blur(10px);
+}
+
+.project-box:hover{
+    transform:translateY(-15px);
+    box-shadow:0 0 30px rgba(0,255,255,0.3);
+}
+.project-btn{
+    margin-top:15px;
+    display:flex;
+    align-items:center;
+    gap:10px;
+    padding:12px 10px;
+    border-radius:30px;
+    text-decoration:none;
+    color:white;
+    font-weight:600;
+    transition:0.4s;
+}
+
+.github{
+    background:#171515;
+}
+
+.linkedin{
+    background:#0077b5;
+}
+
+.project-btn:hover{
+    transform:translateY(-5px) scale(1.05);
+    box-shadow:0 0 20px rgba(0,255,255,0.4);
+}
+/* TECH STACK */
+
+.tech-stack{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+    margin-top:15px;
+}
+
+.tech-stack span{
+    font-size:13px;
+    padding:6px 12px;
+    border-radius:20px;
+    background:rgba(255,255,255,0.06);
+    border:1px solid rgba(0,255,255,0.2);
+    color:#d1d5db;
+    display:flex;
+    align-items:center;
+    gap:6px;
+    transition:0.3s;
+}
+
+/* colorful dot */
+.tech-stack span::before{
+    content:"";
+    width:8px;
+    height:8px;
+    border-radius:50%;
+    background:cyan;
+    display:inline-block;
+}
+
+/* hover effect */
+.tech-stack span:hover{
+    transform:translateY(-3px);
+    background:rgba(0,255,255,0.08);
+    box-shadow:0 0 15px rgba(0,255,255,0.2);
+}
+.project-img{
+    width:100%;
+    height:180px;
+    object-fit:cover;
+    border-radius:15px;
+    margin-bottom:15px;
+    transition:0.4s;
+}
+
+.project-box:hover .project-img{
+    transform:scale(1.05);
+}
+/* CONTACT SECTION */
+
+.contact-section{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:60px;
+    padding:100px 10%;
+    flex-wrap:wrap;
+}
+
+.contact-content{
+    flex:1;
+    min-width:300px;
+}
+
+.contact-content h2{
+    font-size:50px;
+    margin-bottom:20px;
+}
+
+.contact-content h2 span{
+    color:cyan;
+}
+
+.contact-content h4{
+    font-size:24px;
+    margin-bottom:20px;
+    color:#00ffff;
+}
+
+.contact-content p{
+    line-height:1.8;
+    margin-bottom:15px;
+    color:#d1d5db;
+}
+
+/* CONTACT INFO */
+
+.contact-info p{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    font-size:18px;
+}
+
+.contact-info i{
+    color:cyan;
+    font-size:22px;
+}
+
+/* SOCIAL BUTTONS */
+
+.contact-buttons{
+    display:flex;
+    gap:20px;
+    margin-top:25px;
+    flex-wrap:wrap;
+}
+
+.social-btn{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    padding:12px 24px;
+    border-radius:30px;
+    text-decoration:none;
+    color:white;
+    font-weight:600;
+    transition:0.4s;
+}
+
+.github{
+    background:#171515;
+}
+
+.linkedin{
+    background:#0077b5;
+}
+
+.social-btn:hover{
+    transform:translateY(-5px) scale(1.05);
+    box-shadow:0 0 20px rgba(0,255,255,0.4);
+}
+
+/* FORM */
+
+.contact-form{
+    flex:1;
+    min-width:300px;
+}
+
+.contact-form form{
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+}
+
+.contact-form input,
+.contact-form textarea{
+    width:100%;
+    padding:15px;
+    border:none;
+    border-radius:12px;
+    background:#1e293b;
+    color:white;
+    outline:none;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus{
+    border:1px solid cyan;
+    box-shadow:0 0 15px rgba(0,255,255,0.3);
+}
+
+/* BUTTON */
+
+.send-btn{
+    padding:15px;
+    border:none;
+    border-radius:30px;
+    background:linear-gradient(45deg,#00ffff,#007cf0);
+    color:white;
+    font-size:16px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:0.4s;
+}
+
+.send-btn:hover{
+    transform:scale(1.05);
+    box-shadow:0 0 25px cyan;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:991px){
+
+    .contact-section{
+        flex-direction:column;
+    }
+
+    .contact-content h2{
+        font-size:40px;
+    }
+}
+
+/* RESPONSIVE */
+
+@media(max-width:991px){
+
+    .home,
+    .about{
+        flex-direction:column;
+        text-align:center;
+    }
+
+    .home img,
+    .about img{
+        width:250px;
+    }
+
+    .home-content h1{
+        font-size:40px;
+    }
+}
+
+</style>
+</head>
+
+<body data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-offset="70" tabindex="0">
+
+<!-- NAVBAR -->
+
+<nav id="navbar-example2" class="navbar navbar-expand-lg fixed-top">
+
+<div class="container-fluid">
+
+<a class="navbar-brand" href="#">Portfolio</a>
+
+<button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
+<span class="navbar-toggler-icon"></span>
+</button>
+
+<div class="collapse navbar-collapse justify-content-end" id="navmenu">
+
+<ul class="navbar-nav">
+
+<li class="nav-item">
+<a class="nav-link" href="#home">Home</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="#about">About</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="#projects">Projects</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="#contact">Contact</a>
+</li>
+
+</ul>
+
+</div>
+</div>
+</nav>
+
+<!-- HOME -->
+
+<section id="home" class="home" data-aos="fade-up">
+
+<img src="images/photo1.jpg">
+
+<div class="home-content">
+
+<h3>Hello, It's Me</h3>
+
+<h1>Chamindi Dilshika</h1>
+
+<h3>And I'm a <span class="text"></span></h3>
+
+<p>
+I am a Computer Science undergraduate passionate about cloud computing, DevOps practices,
+and full-stack software development. I focus on building scalable applications and understanding
+how modern systems are designed, deployed, and maintained in real-world environments.
+<br>
+I am currently seeking an internship or trainee opportunity to apply my skills in a professional
+environment and gain hands-on industry experience.
+</p>
+
+<div class="home-sci">
+
+<a href="#"><i class="fab fa-facebook-f"></i></a>
+<a href="https://www.linkedin.com/in/chamindi-himashi/"><i class="fab fa-linkedin-in"></i></a>
+<a href="https://github.com/Chamindi-Abeysighe"><i class="fab fa-github"></i></a>
+<a href="#"><i class="fab fa-instagram"></i></a>
+
+</div>
+
+<button class="glow-btn">
+More About Me
+</button>
+
+</div>
+</section>
+
+<!-- ABOUT -->
+
+<section id="about" class="about" data-aos="fade-right">
+
+<img src="images/photo2.jpg">
+
+<div class="about-content">
+
+<h2>About <span>Me</span></h2>
+
+<h4>Computer Science Undergraduate | Cloud & DevOps Enthusiast</h4>
+
+<p>
+I am a Computer Science undergraduate with a strong passion for cloud computing and DevOps engineering,
+alongside software development. I enjoy building end-to-end applications and learning how systems run
+efficiently at scale in production environments.<br><br>
+
+My technical interests include AWS cloud services, Docker containerization, Terraform for infrastructure
+as code, and CI/CD automation using GitHub Actions. I also work with full-stack technologies such as
+React, Node.js, PHP, and MySQL to develop practical web applications.<br><br>
+
+I am currently seeking an internship or trainee position where I can contribute to real-world projects,
+improve my technical skills, and gain hands-on experience in a professional software engineering environment.
+</p>
+
+<button class="glow-btn">
+Download CV
+</button>
+
+</div>
+</section>
+
+<!-- PROJECTS -->
+
+<section id="projects" data-aos="zoom-in">
+
+<div class="container">
+
+<h1 class="text-center mb-5">My Projects</h1>
+
+<div class="projects-container">
+
+  <div class="project-box">
+
+    <h3>Offline Learning Management System</h3>
+    <img src="images/learning.jpg" alt="Offline LMS" class="project-img">
+
+
+    <p>
+        Flutter-based offline learning platform enabling students to access study 
+        materials without internet. Includes a web dashboard for teachers to manage 
+        and upload content using Firebase.
+    </p>
+
+    <!-- Tech Stack -->
+    <div class="tech-stack">
+        <span>Flutter</span>
+        <span>Dart</span>
+        <span>Firebase</span>
+        <span>Cloud Firestore</span>
+        <span>Firebase Storage</span>
+        <span>Authentication</span>
+    </div>
+
+    <!-- Buttons -->
+    <a href="https://github.com/Chamindi-Abeysighe/Offline-first-learning-system"
+       target="_blank"
+       class="project-btn github">
+
+        <i class='bx bxl-github'></i>
+        GitHub
+
+    </a>
+
+    </div>
+
+    
+
+    <div class="project-box">
+
+      <h3>Procedural Combat Arena </h3>
+      <img src="images/combat_arena.jpg" alt="Combat Arena" class="project-img">
+
+      <p>
+        Unity-based 3D combat arena featuring procedural terrain generation, NavMesh AI navigation, and FSM-driven enemy behaviors like patrol, chase, attack, and retreat.
+      </p>
+
+      <!-- Tech Stack -->
+      <div class="tech-stack">
+        <span>Unity</span>
+        <span>C#</span>
+        <span>NavMesh AI</span>
+        <span>Procedural Generation</span>
+        <span>FSM AI</span>
+      </div>
+
+      <!-- Buttons -->
+      <a href="https://github.com/Chamindi-Abeysighe/CombatArena"
+           target="_blank"
+           class="project-btn github">
+
+            <i class='bx bxl-github'></i>
+            GitHub
+
+        </a>
+
+    </div>
+    
+
+    <div class="project-box">
+
+      <h3>Real Estate Property Search Platform</h3>
+      <img src="images/real_estate.jpg" alt="Real Estate Property Search Platform" class="project-img">
+
+
+      <p>
+        React-based property search application with dynamic filtering by location, 
+        price, property type, and bedrooms. Designed for fast and responsive real estate browsing.
+      </p>
+
+      <!-- Tech Stack -->
+      <div class="tech-stack">
+        <span>React.js</span>
+        <span>JavaScript</span>
+        <span>CSS</span>
+      </div>
+
+      <!-- Buttons -->
+      <a href="https://github.com/Chamindi-Abeysighe/Property-Advanced-Search"
+           target="_blank"
+           class="project-btn github">
+
+            <i class='bx bxl-github'></i>
+            GitHub
+
+        </a>
+
+    </div>
+
+    <div class="project-box">
+
+        
+
+        <h3>Sports News & Live Scores Platform</h3>
+        <img src="images/sports.jpg" alt="Sports Website" class="project-img">
+
+
+        <p>
+            A responsive sports website that displays latest sports news, live match updates, and team information.
+            Designed with a clean UI for quick browsing of football, cricket, and other sports content.
+        </p>
+
+        <div class="tech-stack">
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>JavaScript</span>
+            <span>API Integration</span>
+        </div>
+        
+      <!-- Buttons -->
+      <a href="https://github.com/Chamindi-Abeysighe/Sports-Website-Project"
+           target="_blank"
+           class="project-btn github">
+
+            <i class='bx bxl-github'></i>
+            GitHub
+
+        </a>
+
+    </div>
+
+    <div class="project-box">
+
+
+        <h3>Skin Consultation System</h3>
+        <img src="images/skin_consultation.jpg" alt="Skin Consultation System" class="project-img">
+
+        <p>
+            Java-based desktop application for booking and managing skin consultation sessions.
+            Allows patient registration, appointment scheduling, and doctor management.
+        </p>
+
+        <div class="tech-stack">
+            <span>Java</span>
+            <span>OOP</span>
+            <span>File Handling</span>
+            <span>GUI (Swing)</span>
+        </div>
+
+        
+      <!-- Buttons -->
+      <a href="https://github.com/Chamindi-Abeysighe/Skin-Consultation-System"
+           target="_blank"
+           class="project-btn github">
+
+            <i class='bx bxl-github'></i>
+            GitHub
+
+        </a>
+
+    </div>
+
+    
+
+    <div class="project-box">
+
+      <h3>Alumni Influensor Platform</h3>
+      <img src="images/alumni.jpg" alt="Alumni Influensor Platform" class="project-img">
+
+      <p>
+        Full-stack alumni management system built with CodeIgniter 3. Supports authentication, 
+        alumni profiles, featured alumni bidding, REST APIs, and automated winner selection using cron jobs.
+      </p>
+
+      <!-- Tech Stack -->
+      <div class="tech-stack">
+        <span>PHP</span>
+        <span>CodeIgniter 3</span>
+        <span>MySQL</span>
+        <span>REST API</span>
+        <span>OpenAPI (Swagger)</span>
+        <span>HTML5</span>
+        <span>CSS3</span>
+        <span>Bootstrap</span>
+        <span>JavaScript</span>
+        <span>Cron Jobs</span>
+        <span>MVC Architecture</span>
+      </div>
+
+      <!-- Buttons -->
+      <a href="https://github.com/Chamindi-Abeysighe/Alumni_Influencers_Web_API"
+           target="_blank"
+           class="project-btn github">
+
+            <i class='bx bxl-github'></i>
+            GitHub
+
+        </a>
+
+    </div>
+
+    
+
+  </div>
+
+</div>
+
+</section>
+
+<section id="contact" class="contact-section" data-aos="fade-up">
+
+<div class="contact-content">
+
+    <h2>Let's <span>Work Together</span></h2>
+
+    <h4>
+        Seeking Internship & Trainee Opportunities
+    </h4>
+
+    <p>
+        I’m a Computer Science undergraduate passionate about cloud computing,
+        DevOps, and full-stack development. I am currently seeking internship
+        or trainee opportunities where I can contribute to real-world projects,
+        improve my technical skills, and grow as a software engineering professional.
+    </p>
+
+    <!-- EMAIL -->
+
+    <div class="contact-info">
+
+        <p>
+            <i class='bx bxs-send'></i>
+            chamindi.himashi77@gmail.com
+        </p>
+
+    </div>
+
+    <!-- SOCIAL BUTTONS -->
+
+    <div class="contact-buttons">
+
+        <a href="https://github.com/Chamindi-Abeysighe"
+           target="_blank"
+           class="social-btn github">
+
+            <i class='bx bxl-github'></i>
+            GitHub
+
+        </a>
+
+        <a href="https://www.linkedin.com/in/chamindi-himashi/"
+           target="_blank"
+           class="social-btn linkedin">
+
+            <i class='bx bxl-linkedin-square'></i>
+            LinkedIn
+
+        </a>
+
+    </div>
+
+</div>
+
+<!-- CONTACT FORM -->
+
+<div class="contact-form">
+
+    <form>
+
+        <input type="text"
+               placeholder="Your Name"
+               required>
+
+        <input type="email"
+               placeholder="Your Email"
+               required>
+
+        <input type="text"
+               placeholder="Subject">
+
+        <textarea rows="5"
+                  placeholder="Your Message"></textarea>
+
+        <button type="submit" class="send-btn">
+            Send Message
+        </button>
+
+    </form>
+
+</div>
+
+</section>
+
+<!-- SCRIPTS -->
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+<script>
+AOS.init({
+    duration:1200,
+    once:true
+});
+
+var typed = new Typed(".text",{
+    strings:[
+        "Computer Science Undergraduate"
+    ],
+    typeSpeed:80,
+    backSpeed:50,
+    loop:true
+});
+</script>
+
+</body>
+</html>
